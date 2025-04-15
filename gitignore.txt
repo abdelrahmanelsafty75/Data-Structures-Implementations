@@ -1,0 +1,10 @@
+# Visual Studio files
+*.vcxproj
+*.vcxproj.filters
+*.sln
+.vs/
+
+# Compiled files
+*.exe
+*.o
+*.obj
