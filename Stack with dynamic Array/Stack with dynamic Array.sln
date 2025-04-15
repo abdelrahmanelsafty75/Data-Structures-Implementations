@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stack with dynamic Array", "Stack with dynamic Array.vcxproj", "{BF829D24-1311-404D-A58A-7E4660F850BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF829D24-1311-404D-A58A-7E4660F850BC}.Debug|x64.ActiveCfg = Debug|x64
+		{BF829D24-1311-404D-A58A-7E4660F850BC}.Debug|x64.Build.0 = Debug|x64
+		{BF829D24-1311-404D-A58A-7E4660F850BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{BF829D24-1311-404D-A58A-7E4660F850BC}.Debug|x86.Build.0 = Debug|Win32
+		{BF829D24-1311-404D-A58A-7E4660F850BC}.Release|x64.ActiveCfg = Release|x64
+		{BF829D24-1311-404D-A58A-7E4660F850BC}.Release|x64.Build.0 = Release|x64
+		{BF829D24-1311-404D-A58A-7E4660F850BC}.Release|x86.ActiveCfg = Release|Win32
+		{BF829D24-1311-404D-A58A-7E4660F850BC}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE8A0FF8-A098-4F94-9E0A-F1B96E3B33F0}
+	EndGlobalSection
+EndGlobal
