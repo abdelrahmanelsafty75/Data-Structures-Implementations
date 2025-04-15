@@ -8,6 +8,7 @@ This repository contains implementations of fundamental data structures in C++.
 - **Stacks**: Stack using dynamic arrays (see `stacks/`).
 - **Queues**: Queue using arrays and simple queue (see `queues/`).
 - **Binary Search Tree**: Basic BST operations (see `binary_search_tree/`).
+- **Hash Tables**: See `hash_tables/` for a hash table implementation with linear probing.
 - **Bank Management System**: A simple system using data structures (see `bank_management_system/`).
 
 ## How to Use
