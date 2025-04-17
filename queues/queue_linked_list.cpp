@@ -14,26 +14,26 @@ class Queue {
 public:
     Node* front = NULL, * rear = NULL;
     bool isEmpty() {
-        return(front == NULL); // معنى ان الفرونت بنل انه اكيد الرير بنل فواحد كفايه
+        return(front == NULL); // empty
   }
-   void enqueue(int val) {
+   void enqueue(int val) {   // adding an item
        Node* newnode = new Node();
        newnode->data = val;
-       newnode->next = NULL; //لان اي نود هضيفها هتبقى ف الاخر عند الرير فا النيكست بتاعها بنل
+       newnode->next = NULL; 
        if (isEmpty()) {
            front = rear = newnode;  // first node
        }
        else {
-           rear->next = newnode;  // النود اللي كانت الاخيرة "رير" تشاور على اللي لسه ضايفها
-           rear = newnode;        // رير بوينتر بقا
+           rear->next = newnode;  
+           rear = newnode;      
        }
    }
-   void dequeue() {
+   void dequeue() {  // deleting an item
       if (isEmpty())
           cout << " queue is already empty.\n";
-      else if (front == rear) { // only one node.
+      else if (front == rear) { // queue has only one node.
           Node* delptr = front;
-          front = rear = NULL;   //هرجعهم زي ما كانوا ف الاول لان النود الوحيده اتمسحت 
+          front = rear = NULL;   
           delete delptr;
       }
       else {
@@ -42,7 +42,7 @@ public:
           delete delptr;
       }
    }
-   int peak() {
+   int peak() {  // return the first item
        if (isEmpty()) {
            cout << "queue is already emptpy.\n";
            return -1;
@@ -51,11 +51,11 @@ public:
            return front->data;
        }
    }
-   void clear() {
+   void clear() {  // delete all items
        while (!isEmpty())
            dequeue();
     }
-   void display() {
+   void display() {   // display itmes
        if (isEmpty())
            cout << "queue is already empty.\n";
        else {
