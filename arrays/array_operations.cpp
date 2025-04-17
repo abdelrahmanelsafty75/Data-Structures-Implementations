@@ -8,7 +8,7 @@ public:
 	Array(int arrsize) {
 		size = arrsize;
 		length = 0;
-		items = new int[arrsize]; // حجزنا مكان ف الهيب بسايز الاراي اللي انا عاوزه
+		items = new int[arrsize]; // We booked a spot at Heap, the size I want
 	}
 	void fill() {
 		int nofitems;
@@ -22,7 +22,7 @@ public:
 			for (int i = 0; i < nofitems; i++) {
 				cout << "enter item number " << i + 1 << ": \n";
 				cin >> items[i];
-				length++; //"nofitems" هو الاتنين واحد والله فاهمك بس الفكرة ان  ملوش اكسيس تحت الا لو عرفته فوق ف الكلاس
+				length++;  // "noitems" variable is Not global
 			}
 		}
 	}
