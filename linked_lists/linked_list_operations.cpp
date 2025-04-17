@@ -13,20 +13,20 @@ public:
 	bool isempty() {
 		return (head == NULL);
 	}
-	void insert_first(int val) {// 5 10 15 20 
-		Node* newnode = new Node(); // Creat new node !!
-		newnode->data = val; // اساسي ايا كانت فاضيه او لا
+	void insert_first(int val) {  // insert first
+		Node* newnode = new Node(); // Creat new node 
+		newnode->data = val; 
 
 		if (isempty()) {
 			newnode->next = NULL;
 			head = newnode;
 		}   
 		else {
-			newnode->next = head; // لان النود المتصله بالهيد اسمها هيد
+			newnode->next = head; 
 			head = newnode; 
 		}
 	}
-	void insertEnd(int val) { // at the end:   = append heya heya ya ahowg.
+	void insertEnd(int val) { // insert at the end = append 
 		Node* newnode = new Node();
 		newnode->data = val;
 		if (isempty()) {
@@ -35,22 +35,22 @@ public:
 		}
 		else {
 			Node* temp = head;
-			while (temp->next != NULL) { // انا عايز اقف عند اخر نود مخرجش خالص من الليست
+			while (temp->next != NULL) { // stop at the last node
 				temp = temp->next;
 			}
-		     temp->next = newnode;     // خلاصوصلت ابدا انفذ
-		     newnode->next = NULL;    // 20 15 10 5
+		     temp->next = newnode;     
+		     newnode->next = NULL;  
 		}
 	}
-	void insertBefore(int item, int val) {
+	void insertBefore(int item, int val) { // insert befor an item
 		if (isempty())
 			insert_first(val);
-		if (search(item)) { // ممكن تقولي حط قبل ايتم مش موجود اصلا
+		if (search(item)) {  // make sure about that item is exists
 			Node* temp = head;
 
 			Node* newnode = new Node();
 			newnode->data = val;
-			//  ليه لا يساوي عشان اللوب تلف اصلا لان لما اللوب تقف ده معناه اني وصلت خلاص للايتم فا ابدا  انفذ اللي بعد اللوب و اللي هو اصلا مطلوب
+			
 			while (temp != NULL && temp->next->data != item) {
 				temp = temp->next;
 			}
@@ -77,7 +77,7 @@ public:
 		else
 		{
 			Node* temp = head;
-			while (curr < pos - 1) {  // اقف قبل البوزيشن عشان اربط
+			while (curr < pos - 1) {
 				curr++;
 				temp = temp->next;
 			}
@@ -101,8 +101,8 @@ public:
 		}
 	}
 	void display() { // treversing.
-		Node* temp = head; // عشان مش هعرف اتنقل بالهيد لو تنقلت بالهبد هضيع كل عناصر الليست اللي عديت عليها
-
+		Node* temp = head; // creating another pointer, because if i treversing with the 
+						  // head pointer i lose the previous nodes
 		if (isempty())
 			cout << "Linked list is empty\n";
 		else {
@@ -113,7 +113,7 @@ public:
 			cout << endl;
 		}
 	}
-	int count() {
+	int count() {      // count nodes
 		int counter = 0;
 		Node* temp = head;
 		while (temp != NULL) {
@@ -122,7 +122,7 @@ public:
 		}
 		return counter;
 	}
-	bool search(int key) {
+	bool search(int key) {  // search for node
 		Node* temp = head;
 		while (temp != NULL) {
 			if (temp->data == key)
@@ -132,7 +132,7 @@ public:
 		}
 		return false;
 	}
-	int search_ret_pos(int key) {
+	int search_ret_pos(int key) { // search and return value's positon if exist.
 		Node* temp = head;
 		int pos = 1;
 		while (temp != NULL) {
@@ -144,11 +144,11 @@ public:
 		}
 		return -1;
 	}
-	void Delete_item(int item) {
+	void Delete_item(int item) { // Delete 
 		Node* delptr = head;
 		if (isempty())
 			cout << "List is already empty.\n";
-		if (head->data == item) { // كده معناه ان اللي هيتمسح هو اول عنصر 
+		if (head->data == item) {  // state 1
 			head = head->next;
 			delete delptr; 
 		}
@@ -162,7 +162,7 @@ public:
 			delete delptr;
 		}
 	}
-	void Delete_first() { // اللي هيتمسح الاول ولكن فيها اكتر من واحد
+	void Delete_first() { // Delete first item
 		if (isempty())
 			cout << "Already empty!\n";
 		else {
@@ -180,7 +180,7 @@ public:
 		}
 		else {
 			Node* temp = head;
-			while (temp->next->next != NULL) { // عايز اقف عند قبل الاخيرة ,, لازم اتنين نيكست , راجع الابيند
+			while (temp->next->next != NULL) { 
 				temp = temp->next;
 			}
 			delete temp->next;
