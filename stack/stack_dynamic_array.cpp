@@ -11,26 +11,26 @@ public:
 		length = size;
 		top = -1;
 	}
-	bool isempty() {
+	bool isempty() { // check if stack is empty
 		return(top == - 1);
 	}
-	bool isfull() {
+	bool isfull() { // check if stack is full
 		return(top == length - 1);
 	}
-	void push(int val) {
+	void push(int val) {  // add item
 		if (isfull())
 			cout << "Stack overflow ! \n";
 		else {
 			stack[++top] = val;
 		}
 	}
-	void pop() {
+	void pop() {  // delet item
 		if (isempty())
 			cout << "Stack is empty! \n";
 		else
 			top--;
 	}
-	void display() {
+	void display() { // display items
 		if (isempty())
 			cout << "Stack is already empty! \n";
 		else {
@@ -41,7 +41,7 @@ public:
 };
 
 int main() {
-	cout << "Hello Nigga let's practice: ^_^ \n\n";
+	cout << "Hello, let's practice: ^_^ \n\n";
 
 
 	int n;
